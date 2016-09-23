@@ -1,6 +1,6 @@
 html {
   font-size: 1rem;
-  font-family: Helvetica, sans-serif;
+  font-family: Tahoma, sans-serif;
   color: #37392e;
 }
 body {
@@ -39,12 +39,26 @@ nav ul li > a {
   color: #eee5e5;
 }
 /*-----------------------------------------*/
+.horizontal-line {
+  border-color: #37392e;
+  width:80%;
+}
 h1 {
-
+  font-size: 1.7rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 0;
+  z-index: 1;
 }
 h2 {
-
+  margin-top: -10px;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #19647e;
+  z-index: 2;
 }
+
 
 
 /*footer------------------------------------*/
