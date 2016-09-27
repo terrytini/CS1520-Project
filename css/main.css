@@ -16,6 +16,9 @@ p {
   width: 60%;
   text-align: left;
 }
+#home, #resume, #portfolio,#contact {
+    padding-top: 50px;
+}
 /*nav------------------------------------------------*/
 nav {
   font-family: Tahoma, sans-serif;
