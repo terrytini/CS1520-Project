@@ -1,13 +1,17 @@
 html {
   font-size: 1rem;
   font-family: Tahoma, sans-serif;
-  color: #37392e;
+  color: #3b3a36;
 }
 body {
   text-align: center;
-  background: #ddcecd;
-  background-attachment:fixed;
-  margin-top: 70px;
+  background: #e9ece5;
+}
+img.fixed {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  z-index: 999;
 }
 p {
   display: inline-block;
@@ -32,54 +36,54 @@ br {
 }
 nav {
   font-family: Tahoma, sans-serif;
+  color: #eee5e5;
+  width: 100%l
+  margin: 0;
+  padding: 0;
+}
+nav > ul {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  height: 60px;
-  background-color: #37392e;
-  color: #eee5e5;
-}
-nav ul {
   list-style: none;
-  padding: 0;
+  margin: 0;
+  background-color: #3b3a36;
+  padding: 10px;
+  width: 100%;
   text-align: center;
+  z-index: 1000;
 }
-nav ul li {
+nav > ul > li {
   display: inline-block;
-  margin-right: 20px;
+  margin: 0;
   font-size: 1.2rem;
 }
-nav ul li:first-child {
+nav > ul > li:first-child {
   font-size: 1.5rem;
   margin-left: 20px;
   float: left;
-  margin-right: 0;
   font-weight: bolder;
   letter-spacing: 2px;
+  color: #c0dfd9;
 }
-nav ul li:last-child {
-  margin-right: 0;
-}
-nav ul li > a {
+nav > ul > li > a {
   font-weight: bold;
   text-decoration: none;
   color: #eee5e5;
+  padding: 15px;
 }
 nav ul li > a:hover {
-  color: white;
+  color: #3b3a36;
+  background-color: #b3c2bf;
 }
 .horizontal-line1 {
-  border-color: #37392e;
+  border-color: #b3c2bf;
   width:65%;
   margin-top: 3px;
 }
 .horizontal-line2{
-  border-color: #d3d3d3;
+  border-color: #b3c2bf;
   width: 50%;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 15px auto;
 }
 h1 {
   font-size: 1.7rem;
@@ -91,21 +95,22 @@ h1 {
 h2 {
   font-size: 1.5rem;
   text-align: center;
+  color: #b3c2bf;
 }
 .resume-box {
   width: 300px;
   height: 300px;
   margin: 10px;
-  border: 3px solid gray;
+  border: 3px solid #b3c2bf;
   border-radius: 10px;
   vertical-align: middle;
   display: inline-block;
 }
 .box{
   text-align: center;
-  width: auto;
+  width: 70%;
   height: auto;
-  /*border: 3px solid black;*/
+  margin: auto;
 }
 .icon-box {
   height: 50%;
@@ -141,7 +146,7 @@ h2 {
 footer {
   font-size: 0.7rem;
   text-align: center;
-  background-color: #37392e;
-  color: #eee5e5;
+  background-color: #3b3a36;
+  color: #e9ece5;
   padding: 10px;
 }
