@@ -5,13 +5,15 @@
     <meta content="author: terry-tan">
     <title>Terry Tan - Portfolio</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css"/>
   </head>
 
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="#home">Terry Tan</a></li>
+          <li>Terry Tan</li>
           <li><a href="#home">Home</a></li>
           <li><a href="#resume">Resum&eacute;</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -21,33 +23,91 @@
     </header>
     <section id="home">
       <h1>HOME</h1>
-      <hr class="horizontal-line2">
       <hr class="horizontal-line1">
       <p>
         Welcome to my personal website!<br />
         My name is Terry Tan.<br />
         I'm currently an undergraduate at the University of Pittsburgh.<br />
-        I like cats, coding, and proofs.
+        I like cats, coding, and proofs.<br />
+        I began my freshman year as a pre-med student, majoring in Chemistry. The plan
+        was always to become a medical doctor until the end of my sophomore year. I had
+        decided it wasn't what I wanted to do anymore.
+        I've always felt a deep connection with computers, mathematics, and art, so I decided
+        to become a Mathematics and Computer Science major with a minor in Studio Arts.<br />
+        I hope to incorporate either my mathematical or artistic background into
+        my experiences and projects.
       </p>
     </section>
-
     <section id="resume">
       <h1>RESUM&Eacute;</h1>
-      <hr class="horizontal-line2">
       <hr class="horizontal-line1">
-      <br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="box">
+          <div class="resume-box">
+            <img class="icon" src="./images/mortarboard.png" /><br />
+            <div class="title">Education</div>
+            University of Pittsburgh<br />
+            Computer Science and Mathematics<br />
+            Studio Arts and Chemistry<br />
+            GPA: 3.836
+          </div>
+          <div class="resume-box">
+            <img class="icon" src="./images/coding.png" /><br />
+            <div class="title">Languages</div>
+            Java, C, CSS, HTML, MATLAB, LaTeX
+          </div>
+          <div class="resume-box">
+            <img class="icon" src="./images/pencil.png" /><br />
+            <div class="title">Employment</div>
+            Illustrator at The Pitt News
+          </div>
+          <div class="resume-box">
+            <img class="icon" src="" /><br />
+            <div class="title">Extracurriculars</div>
+            Business Manager of Math Club<br />
+            LoL at Pitt<br />
+            Computer Science Club<br />
+        </div>
+        <div class="resume-box">
+          <img class="icon" src="./images/github-logo.png" /><br />
+          <div class="title">Personal Projects</div>
+          Project Euler Solutions<br />
+          Error Analysis on Power Method<br />
+          Personal Website<br />
+          Zombie Population Modeling<br />
     </section>
 
     <section id="portfolio">
       <h1>PORTFOLIO</h1>
-      <hr class="horizontal-line2">
       <hr class="horizontal-line1">
-      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <h2>Miscellaneous Projects</h2>
+      <div class="one-time">
+        <div><img src="./images/art-2.png" alt="" class="portfolio-img"></div>
+        <div><img src="./images/art-3.png" alt="" class="portfolio-img"></div>
+        <div><img src="./images/art-4.png" alt="" class="portfolio-img"></div>
+        <div><img src="./images/tpn-1.png" alt="" class="portfolio-img"></div>
+        <div><img src="./images/tpn-8.png" alt="" class="portfolio-img"></div>
+        <div><img src="./images/tpn-10.png" alt="" class="portfolio-img"></div>
+      </div>
+      <hr class="horizontal-line2">
+      <h2>Project: Plastic Surgery - "Make Me Pretty"</h2>
+      <div class="fade">
+        <div><img src="./images/pretty-1.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-2.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-3.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-3-1.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-3-2.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-4.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-5.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-6.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-7.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-8.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-9.png" alt="" class="project-img"></div>
+        <div><img src="./images/pretty-10.png" alt="" class="project-img"></div>
+      </div>
     </section>
 
     <section id="contact">
       <h1>CONTACT</h1>
-      <hr class="horizontal-line2">
       <hr class="horizontal-line1">
       <!-- Note to self: Need contact form! -->
       <br /><br /><br /><br /><br /><br /><br /><br />
@@ -56,5 +116,9 @@
     <footer>
       footer iz here
     </footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./slick-1.6.0/slick/slick.js"></script>
+    <script type="text/javascript" src="./js/js_stuff.js"></script>
   </body>
 </html>
