@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="author: terry-tan">
     <title>Terry Tan - Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css"/>
   </head>
@@ -14,10 +14,10 @@
       <nav>
         <ul>
           <li>Terry Tan</li>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#resume">Resum&eacute;</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" onclick="smoothScroll('home');" >Home</a></li>
+          <li><a href="#resume" onclick="smoothScroll('resume');">Resum&eacute;</a></li>
+          <li><a href="#portfolio" onclick="smoothScroll('portfolio');">Portfolio</a></li>
+          <li><a href="#contact" onclick="smoothScroll('contact');">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -109,16 +109,41 @@
     <section id="contact">
       <h1>CONTACT</h1>
       <hr class="horizontal-line1">
-      <!-- Note to self: Need contact form! -->
-      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div id="formDiv">
+       <div id="notification">
+       </div>
+       <form id="contactForm" action="#" method="get">
+         <fieldset class="texts">
+           <div class="input-holder">
+             <label for="firstname">Firstname: </label>
+             <input type="text" id="firstname" maxlength="25" />
+           </div>
+           <div class="input-holder">
+             <label for="lastname">Lastname: </label>
+             <input type="text" id="lastname" maxlength="25"/>
+           </div>
+           <div class="input-holder">
+             <label for="email">E-mail: </label>
+             <input type="text" id="email">
+           </div>
+         </fieldset>
+         <fieldset class="largetext">
+           What do you want to know?:<br />
+           <textarea rows="3" cols="40" id="questiontext"></textarea>
+         </fieldset>
+         <input type="button" value="reset" onclick="resetForm()" />
+         <input type="submit" name="submit" value="submit" onclick="validation()" />
+       </form>
+     </div>
     </section>
 
     <footer>
-      footer iz here
+      Credits for the icons: Pixel Buddha, Roundicons, Freepik, Prosymbols, and Dave Gandy @ flaticon.com<br />
+      Credits for the image carousel: <a href="http://kenwheeler.github.io/slick/">Ken Wheeler </a>
     </footer>
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="./slick-1.6.0/slick/slick.js"></script>
-    <script type="text/javascript" src="./js/js_stuff.js"></script>
+    <script type="text/javascript" src="slick-1.6.0/slick/slick.js"></script>
+    <script type="text/javascript" src="js/js_stuff.js"></script>
   </body>
 </html>
