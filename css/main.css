@@ -6,13 +6,16 @@ html {
 body {
   text-align: center;
   background: #e9ece5;
+  margin: 0;
 }
 
 p {
-  display: inline-block;
-  position: center;
+  text-align: center;
+  display: block;
+}
+#home>p {
   width: 60%;
-  text-align: left;
+  margin: auto;
 }
 br {
   line-height:150%;
@@ -146,6 +149,7 @@ footer {
   color: #e9ece5;
   padding: 10px;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 footer > a {
   color: #e9ece5;
