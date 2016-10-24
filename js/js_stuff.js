@@ -1,4 +1,3 @@
-console.log('hello from js_stuff.js');
 //Not my code -------- (provided by the slick website)
 $(document).on('ready', function() {
   $('.fade').slick({
