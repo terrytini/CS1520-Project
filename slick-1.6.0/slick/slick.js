@@ -1,3 +1,4 @@
+console.log('hello from /slick-1.6.0/slick.js');
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
