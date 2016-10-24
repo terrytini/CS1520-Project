@@ -1,6 +1,6 @@
 html {
   font-size: 1rem;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #3b3a36;
 }
 body {
@@ -14,14 +14,65 @@ p {
   display: block;
 }
 #home>p {
+  font-weight: bold;
   width: 60%;
   margin: auto;
+  border: 3px solid #e9ece5;
+  border-radius: 10px;
+  padding: 20px;
 }
 br {
   line-height:150%;
 }
 #home,#portfolio,#contact {
     padding-top: 50px;
+}
+#hello-img {
+  margin-top: 50px;
+  margin-bottom: -90px;
+}
+.header-img {
+  margin: -70px auto;
+}
+/*NOTE: anywhere where its says "transform" the code is pulled
+from stackoverflow here: http://stackoverflow.com/questions/22352311/how-do-i-draw-a-diagonal-div
+*/
+#home-bottom {
+  background-color: #99D9DB;
+  z-index: -2;
+  margin-top: -10%;
+  padding-top: 11%;
+  padding-bottom: 7%;
+  position: relative;
+  webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
+  transform: skewY(2deg);
+}
+#home {
+  -webkit-transform: skewY(-7deg);
+  -moz-transform: skewY(-7deg);
+  -ms-transform: skewY(-7deg);
+  -o-transform: skewY(-7deg);
+  transform: skewY(-7deg);
+  padding-bottom: 50px;
+  background-color: #99D9DB;
+  z-index: -1;
+  position: relative;
+}
+#home > p {
+  -webkit-transform: skewY(7deg);
+  -moz-transform: skewY(7deg);
+  -ms-transform: skewY(7deg);
+  -o-transform: skewY(7deg);
+  transform: skewY(7deg);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#cat-img {
+  margin: -170px auto auto 90px;
+  position: absolute;
 }
 #portfolio {
   clear: both;
@@ -56,14 +107,6 @@ nav > ul > li {
   margin: 0;
   font-size: 1.2rem;
 }
-nav > ul > li:first-child {
-  font-size: 1.5rem;
-  margin-left: 20px;
-  float: left;
-  font-weight: bolder;
-  letter-spacing: 2px;
-  color: #c0dfd9;
-}
 nav > ul > li > a {
   font-weight: bold;
   text-decoration: none;
@@ -72,7 +115,22 @@ nav > ul > li > a {
 }
 nav ul li > a:hover {
   color: #3b3a36;
-  background-color: #b3c2bf;
+  background-color: #99D9DB;
+}
+nav > ul > li:first-child {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  float: left;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: #99D9DB;
+}
+nav > ul > li:first-child > a {
+  color: #99D9DB;
+}
+nav > ul > li:first-child > a:hover {
+  color: #99D9DB;
+  background: none;
 }
 .horizontal-line1 {
   border-color: #b3c2bf;
