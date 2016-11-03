@@ -1,3 +1,10 @@
+<?php
+  include 'php/main.php';
+  include 'php/resumeitems.php';
+  include 'php/portfolio.php';
+
+?>
+
 <!doctype html>
 <html>
   <head>
@@ -17,10 +24,10 @@
       <nav>
         <ul>
           <li><a href="#top" onclick="smoothScroll('top');">Terry Tan</a></li>
-          <li><a href="#top" onclick="smoothScroll('top');" >Home</a></li>
-          <li><a href="#resume" onclick="smoothScroll('resume');">Resum&eacute;</a></li>
-          <li><a href="#portfolio" onclick="smoothScroll('portfolio');">Portfolio</a></li>
-          <li><a href="#contact" onclick="smoothScroll('contact');">Contact</a></li>
+          <li><a class="link" href="#top" onclick="smoothScroll('top');" >Home</a></li>
+          <li><a class="link" href="#resume" onclick="smoothScroll('resume');">Resum&eacute;</a></li>
+          <li><a class="link" href="#portfolio" onclick="smoothScroll('portfolio');">Portfolio</a></li>
+          <li><a class="link" href="#contact" onclick="smoothScroll('contact');">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -45,68 +52,17 @@
     <img  class="header-img" src="./images/Resume.png" />
     <section id="resume">
         <div class="box">
+          <?php foreach ($resumeitems as $item): ?>
           <div class="resume-box">
-            <img class="icon" src="./images/mortarboard.png" /><br />
-            <h1 class="title">Education</h1>
+            <img class="icon" src="<?= $item->getIconSrc(); ?>" /><br />
+            <h1 class="title"><?= $item->getTitle(); ?></h1>
             <p>
-              University of Pittsburgh<br />
-              Computer Science and Mathematics<br />
-              Studio Arts and Chemistry<br />
-              GPA: 3.836
+              <?php foreach ($item->getList() as $subitem): ?>
+                <?= $subitem; ?><br>
+              <?php endforeach; ?>
             </p>
           </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/coding.png" /><br />
-            <h1 class="title">Languages</h1>
-            <p>
-              Java, C, CSS, HTML, MATLAB, LaTeX
-            </p>
-          </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/github-logo.png" /><br />
-            <h1 class="title">Personal Projects</h1>
-            <p>
-              Project Euler Solutions<br />
-              Error Analysis on Power Method<br />
-              Personal Website<br />
-            </p>
-          </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/github-logo.png" /><br />
-            <h1 class="title">Class Projects</h1>
-            <p>
-              File System<br />
-              Password Checker<br />
-              LZW Compression<br />
-              RSA Signature<br />
-            </p>
-          </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/light-bulb.png" /><br />
-            <h1 class="title">Ongoing Projects</h1>
-            <p>
-              Laboon Chess - Class<br />
-              Secure File Sharing System - Class<br />
-              Zombie Population Modeling - Personal<br />
-              Steganography with Images - Personal<br />
-            </p>
-          </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/pencil.png" /><br />
-            <h1 class="title">Employment</h1>
-            <p>
-              Illustrator at The Pitt News
-            </p>
-          </div>
-          <div class="resume-box">
-            <img class="icon" src="./images/computer.png" /><br />
-            <h1 class="title">Extracurriculars</h1>
-            <p>
-              Business Manager of Math Club<br />
-              LoL at Pitt<br />
-              Computer Science Club<br />
-            </p>
-          </div>
+          <?php endforeach; ?>
         </div>
     </section>
 
@@ -115,28 +71,16 @@
       <hr class="horizontal-line1">
       <h2>Miscellaneous Projects</h2>
       <div class="one-time">
-        <div><img src="./images/art-2.png" alt="" class="portfolio-img"></div>
-        <div><img src="./images/art-3.png" alt="" class="portfolio-img"></div>
-        <div><img src="./images/art-4.png" alt="" class="portfolio-img"></div>
-        <div><img src="./images/tpn-1.png" alt="" class="portfolio-img"></div>
-        <div><img src="./images/tpn-8.png" alt="" class="portfolio-img"></div>
-        <div><img src="./images/tpn-10.png" alt="" class="portfolio-img"></div>
+        <?php foreach ($miscprojects as $image): ?>
+          <div><img src="<?= $image ?>" alt="" class="portfolio-img"></div>
+        <?php endforeach; ?>
       </div>
       <hr class="horizontal-line2">
       <h2>Project: Plastic Surgery - "Make Me Pretty"</h2>
       <div class="fade">
-        <div><img src="./images/pretty-1.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-2.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-3.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-3-1.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-3-2.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-4.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-5.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-6.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-7.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-8.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-9.png" alt="" class="project-img"></div>
-        <div><img src="./images/pretty-10.png" alt="" class="project-img"></div>
+        <?php foreach ($prettyproj as $image): ?>
+          <div><img src="<?= $image ?>" alt="" class="project-img"></div>
+        <?php endforeach; ?>
       </div>
     </section>
 
