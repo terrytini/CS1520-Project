@@ -62,17 +62,33 @@ function smoothScroll(eID) {
     }
     return false;
 }
+
+var firstName,lastName,emailAddress,text;
+
+$("#contactForm").submit(function (e) {
+    e.preventDefault();
+    var form = $('#contactForm');
+    $.ajax({
+        url: "php/submit.php",
+        type: "GET",
+        data: {"firstname": firstName, "lastname": lastName, "email": emailAddress, "questiontext": text},
+        success: function (data){
+            $("#formDiv").append("We have successfully received your submission.");
+        },
+        error: function(xhr){
+          $("#formDiv").append("Something went wrong with receiving your submission.");
+        }
+    });
+});
+
 //----END of Not My Code-------------------
 
-$("#contactForm").submit( function(e) {
-    e.preventDefault();
-});
 function resetForm (event){
 	document.getElementById("contactForm").reset();
 }
 function validation(event) {
-	var firstName, lastName, numCats;
 	firstName = document.getElementById("firstname").value;
+  lastName = document.getElementById("lastname").value;
   emailAddress = document.getElementById("email").value;
   text = document.getElementById("questiontext").value;
 	var errMessage = "";

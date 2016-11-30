@@ -2,7 +2,6 @@
   include 'php/main.php';
   include 'php/resumeitems.php';
   include 'php/portfolio.php';
-
 ?>
 
 <!doctype html>
@@ -20,17 +19,9 @@
 
   <body>
     <section id="top"></section>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#top" onclick="smoothScroll('top');">Terry Tan</a></li>
-          <li><a class="link" href="#top" onclick="smoothScroll('top');" >Home</a></li>
-          <li><a class="link" href="#resume" onclick="smoothScroll('resume');">Resum&eacute;</a></li>
-          <li><a class="link" href="#portfolio" onclick="smoothScroll('portfolio');">Portfolio</a></li>
-          <li><a class="link" href="#contact" onclick="smoothScroll('contact');">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <?php
+      include 'php/header.php'
+    ?>
     <img  id="hello-img" src="./images/Hello.png" />
     <section id="home">
       <p>
@@ -90,35 +81,34 @@
       <div id="formDiv">
        <div id="notification">
        </div>
-       <form id="contactForm" action="#" method="get">
+       <form id="contactForm" action="php/submit.php" method="post">
          <fieldset class="texts">
            <div class="input-holder">
              <label for="firstname">Firstname: </label>
-             <input type="text" id="firstname" maxlength="25" />
+             <input type="text" id="firstname" name="firstname" maxlength="25" />
            </div>
            <div class="input-holder">
              <label for="lastname">Lastname: </label>
-             <input type="text" id="lastname" maxlength="25"/>
+             <input type="text" id="lastname" name="lastname" maxlength="25"/>
            </div>
            <div class="input-holder">
              <label for="email">E-mail: </label>
-             <input type="text" id="email">
+             <input type="text" id="email" name="email">
            </div>
          </fieldset>
          <fieldset class="largetext">
            What do you want to know?:<br />
-           <textarea rows="3" cols="40" id="questiontext"></textarea>
+           <textarea rows="3" cols="40" id="questiontext" name="questiontext"></textarea>
          </fieldset>
          <input type="button" value="reset" onclick="resetForm()" />
          <input type="submit" name="submit" value="submit" onclick="validation()" />
        </form>
      </div>
     </section>
-
     <footer>
       <p>
         Credits for the icons: Pixel Buddha, Roundicons, Freepik, Prosymbols, and Dave Gandy @ flaticon.com<br />
-        Credits for the image carousel: <a href="http://kenwheeler.github.io/slick/">Ken Wheeler </a>
+        Credits for the image carousels: <a href="http://kenwheeler.github.io/slick/">Ken Wheeler </a>
       </p>
     </footer>
 
