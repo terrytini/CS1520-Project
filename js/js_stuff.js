@@ -64,21 +64,23 @@ function smoothScroll(eID) {
 }
 
 var firstName,lastName,emailAddress,text;
+var goodFormInput = false;
 
 $("#contactForm").submit(function (e) {
     e.preventDefault();
-    var form = $('#contactForm');
-    $.ajax({
-        url: "php/submit.php",
-        type: "GET",
-        data: {"firstname": firstName, "lastname": lastName, "email": emailAddress, "questiontext": text},
-        success: function (data){
-            $("#formDiv").append("We have successfully received your submission.");
-        },
-        error: function(xhr){
-          $("#formDiv").append("Something went wrong with receiving your submission.");
-        }
-    });
+    if(goodFormInput){
+      $.ajax({
+          url: "php/submit.php",
+          type: "GET",
+          data: {"firstname": firstName, "lastname": lastName, "email": emailAddress, "questiontext": text},
+          success: function (data){
+              $("#formDiv").append("We have successfully received your submission.");
+          },
+          error: function(xhr){
+            $("#formDiv").append("Something went wrong with receiving your submission.");
+          }
+      });
+    }
 });
 
 //----END of Not My Code-------------------
@@ -102,7 +104,8 @@ function validation(event) {
 		document.getElementById('notification').innerHTML = "<u>Error</u>: " + errMessage;
 	}
 	else {
+    goodFormInput = true;
 		document.getElementById('notification').innerHTML = "";
-		document.getElementById("formDiv").innerHTML = "<br />Thank you for your submission " + firstName +"!<br /><br />" ;
+		document.getElementById("formDiv").innerHTML = "<br />Thank you for your submission " + firstName +". <br /><br />" ;
 	}
 }

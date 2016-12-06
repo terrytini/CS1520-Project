@@ -10,8 +10,8 @@
     //check if database exists and make a new one if not
     if(!(mysql_select_db('mywebsite', $connection))){
       echo "Trying to create new database. ";
-      $sql = "CREATE DATABASE IF NOT EXISTS mywebsite";
-      if ($connection->query($sql) === TRUE) {
+      $sql = "CREATE DATABASE mywebsite";
+      if (mysql_query($sql, $connection)) {
           echo "Database created successfully. ";
       } else {
           echo "Error creating database. ";
