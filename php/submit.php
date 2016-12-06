@@ -4,22 +4,22 @@
     if(!($connection)) {
       die("Connection failed. ");
     }else{
-      echo("Made a connection to server! ");
+      //successfully made connection to server, continue on
     }
 
     //check if database exists and make a new one if not
     if(!(mysql_select_db('mywebsite', $connection))){
-      echo "Trying to create new database. ";
+      //trying to create new database
       $sql = "CREATE DATABASE mywebsite";
       if (mysql_query($sql, $connection)) {
-          echo "Database created successfully. ";
+          //successfully created new db
       } else {
-          echo "Error creating database. ";
+          die("Error creating database.");
       }
 
     }
     else{
-      echo "Database exists!\n";
+      //db exists
     }
 
     $sql = "CREATE TABLE FormStuff (
@@ -30,9 +30,9 @@
     )";
 
     if(mysql_query($sql, $connection)){
-      echo "Table did not exist, made a new one! ";
+      //Table did not exist, made a new one
     }else{
-      echo "Table exists! ";
+      //table already exists
     }
 
     $firstname = $_GET["firstname"];
@@ -43,12 +43,10 @@
     $sql2 = "INSERT INTO FormStuff (firstname, lastname, email, comments) VALUES ('$firstname', '$lastname', '$email', '$comments')";
 
     if(mysql_query($sql2, $connection)){
-      echo "Successfully submitted form data!";
+      //successfully submitted data
     }else{
-      echo "Error submitting form data :(";
+      die("Error submitting form data :(");
     }
 
-    mysql_close();
+    mysql_close();  //close connections
  ?>
-
-<h1>Thank you for your submission <?= $firstname ?>!</h1>

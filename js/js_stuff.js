@@ -63,6 +63,8 @@ function smoothScroll(eID) {
     return false;
 }
 
+//----END of Not My Code-------------------
+
 var firstName,lastName,emailAddress,text;
 var goodFormInput = false;
 
@@ -83,7 +85,6 @@ $("#contactForm").submit(function (e) {
     }
 });
 
-//----END of Not My Code-------------------
 
 function resetForm (event){
 	document.getElementById("contactForm").reset();
